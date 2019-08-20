@@ -1,0 +1,42 @@
+@import "../../styles/vars.scss";
+
+.sidebar__item {
+
+    &:hover {
+
+        .sidebar__item-name {
+            opacity: .6;
+        }
+    }
+}
+
+.sidebar__item_active {
+    background-color: $sidebarActiveBg;
+
+    .sidebar__link {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            display: block;
+            width: 5px;
+            background-color: $sidebarStripeColor;
+        }
+    }
+}
+
+.sidebar__link {
+    display: block;
+    padding: 17px 3.846% 17px 9.615%;
+}
+
+.sidebar__item-name {
+    font-size: 15px;
+    line-height: 19px;
+    color: $sidebarTextColor;
+    transition: .2s;
+}

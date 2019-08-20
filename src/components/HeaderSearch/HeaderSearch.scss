@@ -1,0 +1,21 @@
+@import "../../styles/vars.scss";
+@import "../../styles/mixins.scss";
+
+.header__search-label {
+    display: flex;
+    align-items: center;
+}
+
+.header__search-pic {
+    width: 16px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.header__input {
+    width: 210px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    @include placeholder(12px, 20px, normal, $placeholderColor);
+}

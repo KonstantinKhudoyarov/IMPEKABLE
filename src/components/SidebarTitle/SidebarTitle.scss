@@ -1,0 +1,15 @@
+@import "../../styles/vars.scss";
+
+.sidebar__head {
+    padding: 26px 7.692% 25px;
+    background-color: $sidebarTitleBg;
+    box-shadow: 0px 2px 3px $shadowColor;
+}
+
+.sidebar__title {
+    font-size: 15px;
+    line-height: 21px;
+    color: $sidebarTextColor;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}

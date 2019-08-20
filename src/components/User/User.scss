@@ -1,0 +1,29 @@
+@import "../../styles/vars.scss";
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.user__name {
+    margin-right: 15px;
+    font-size: 13px;
+    line-height: 20px;
+    color: $placeholderColor;
+}
+
+.user__dropdown {
+    @extend .user;
+    cursor: pointer;
+}
+
+.user__arrow {
+    margin-right: 10px;
+}
+
+.user__pic {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    overflow: hidden;
+}

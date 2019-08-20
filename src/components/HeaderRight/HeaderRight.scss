@@ -1,0 +1,13 @@
+@import "../../styles/vars.scss";
+
+.header__right {
+    display: flex;
+    align-items: center;
+}
+
+.header__right-divider {
+    width: 1px;
+    height: 28px;
+    margin: 0 17px;
+    background-color: $headerRightDivider;
+}

@@ -1,0 +1,16 @@
+.header__nav {
+    display: flex;
+    align-items: center;
+}
+
+.header__nav-item {
+    cursor: pointer;
+
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+.header__nav-pic {
+    width: 16px;
+}
