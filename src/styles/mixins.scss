@@ -28,3 +28,15 @@
     }
 
 }
+
+@mixin r($width) {
+    @media screen and (max-width: $width + 'px') {
+        @content;
+    }
+}
+
+@mixin resetCalendarControls($color: transparent, $bg: transparent, $border: transparent) {
+    color: $color;
+    background-color: $bg;
+    border-color: $border;
+}
