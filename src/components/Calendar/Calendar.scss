@@ -1,0 +1,119 @@
+@import "../../styles/vars.scss";
+@import "../../styles/mixins.scss";
+
+.calendar {
+    min-height: 859px;
+}
+
+.calendar__title {
+    margin-bottom: 32px;
+    font-size: 28px;
+    line-height: 40px;
+    color: $sidebarBg;
+}
+
+.calendar__wrap {
+    padding: 19px 20px 35px;
+    font-family: 'Source Sans Pro', sans-serif;
+    box-shadow: 0px 2px 6px $shadowColor;
+    background-color: $sidebarTextColor;
+}
+
+.calendar__subtitle {
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 18px;
+    color: $placeholderColor;
+}
+
+/*react-calendar*/
+.rbc-calendar {
+
+    .rbc-toolbar {
+        margin-bottom: 20px;
+
+        button {
+            &:focus {
+                @include resetCalendarControls($brightColor, transparent, $borderColor);
+            }
+
+            &:active {
+
+                &:hover {
+                    @include resetCalendarControls($brightColor, transparent, $borderColor);
+                }
+            }
+
+            &.rbc-active {
+                box-shadow: 0 0 0 0 transparent;
+                @include resetCalendarControls($brightColor, transparent, $borderColor);
+
+                &:focus,
+                &:active,
+                &:hover {
+                    box-shadow: 0 0 0 0 transparent;
+                    @include resetCalendarControls($brightColor, transparent, $borderColor);
+                }
+            }
+        }
+    }
+
+    .rbc-month-view {
+        border-color: $daysBorderColor;
+    }
+}
+
+.rbc-toolbar-label {
+    font-size: 18px;
+    line-height: 18px;
+    color: $placeholderColor;
+}
+
+.rbc-toolbar {
+
+    .rbc-btn-group {
+        box-shadow: 0px 2px 3px $shadowColor;
+
+        button {
+            padding: 8px 16px 7px;
+            font-size: 13px;
+            line-height: 20px;
+            color: $placeholderColor;
+            border-color: $borderColor;
+            cursor: pointer;
+
+            &:hover {
+                @include resetCalendarControls($brightColor, transparent, $borderColor);
+            }
+        }
+    }
+}
+
+.rbc-header {
+
+    span {
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 14px;
+        color: $dayColor;
+        text-transform: uppercase;
+    }
+}
+
+.rbc-month-header {
+    padding: 16px 0 15px;
+    background-color: $daysBg;
+
+    .rbc-header {
+
+        &+.rbc-header {
+            border-left: none;
+        }
+    }
+
+    .rbc-header {
+        border: none;
+    }
+}
+
+/*END react-calendar*/
