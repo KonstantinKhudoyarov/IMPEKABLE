@@ -1,8 +1,11 @@
 @import "../../styles/vars.scss";
 
 .sidebar {
-    position: relative;
-    width: 16.25%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 260px;
     height: 100%;
     background-color: $sidebarBg;
 }

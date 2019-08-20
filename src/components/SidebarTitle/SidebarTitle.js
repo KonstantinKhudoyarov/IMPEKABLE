@@ -7,9 +7,9 @@ export class SidebarTitle extends React.Component {
 
         return (
             <div className="sidebar__head">
-                <h1 className="sidebar__title">
+                <h2 className="sidebar__title">
                     {children}
-                </h1>
+                </h2>
             </div>
         );
     }

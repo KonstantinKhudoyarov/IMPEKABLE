@@ -137,6 +137,7 @@
     /*END reset css*/
 
     @import "styles/vars.scss";
+    @import "styles/mixins.scss";
 
     * {
       box-sizing: border-box;
@@ -168,6 +169,7 @@
     .container {
       max-width: $containerWidth;
       margin: 0 auto;
+      padding: 0 10px;
     }
 
     a {
@@ -177,4 +179,9 @@
     img {
       display: block;
       max-width: 100%;
+    }
+
+    button {
+      font-family: 'Source Sans Pro', sans-serif;
+      outline: none;
     }
