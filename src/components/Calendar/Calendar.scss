@@ -28,6 +28,7 @@
 
 /*react-calendar*/
 .rbc-calendar {
+    height: 90%;
 
     .rbc-toolbar {
         margin-bottom: 20px;
@@ -59,7 +60,53 @@
     }
 
     .rbc-month-view {
+        height: auto;
         border-color: $daysBorderColor;
+    }
+
+    .rbc-off-range-bg,
+    .rbc-today {
+        background-color: $daysBg;
+    }
+
+    .rbc-month-row {
+
+        &+.rbc-month-row {
+            border-top: 1px solid $daysBorderColor;
+        }
+    }
+
+    .rbc-day-bg {
+
+        &+.rbc-day-bg {
+            border-left: 1px solid $daysBorderColor;
+        }
+    }
+
+    .rbc-event {
+        background-color: $brightColor;
+
+        &.rbc-selected {
+            background-color: $brightColor;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .rbc-current-time-indicator {
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -3px;
+            width: 8px;
+            height: 8px;
+            background-color: $timeIndicatorColor;
+            border-radius: 50%;
+        }
     }
 }
 
@@ -102,6 +149,7 @@
 
 .rbc-month-header {
     padding: 16px 0 15px;
+    border-bottom: 1px solid $daysBorderColor;
     background-color: $daysBg;
 
     .rbc-header {
