@@ -1,9 +1,10 @@
 import React from 'react';
 import './SidebarItem.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export class SidebarItem extends React.Component {
     render() {
-        const { id, name, activeItem } = this.props;
+        const { id, name, activeItem, icon } = this.props;
         let className = 'sidebar__item';
 
         if (activeItem === name) {
@@ -12,11 +13,11 @@ export class SidebarItem extends React.Component {
 
         return (
             <li key={id} className={className} data-name={name}>
-                <a href="" className="sidebar__link">
-                    {/* <img className="sidebar__img" alt="item-image" /> */}
+                <a href="#" className="sidebar__link">
+                    <FontAwesomeIcon icon={icon} />
                     <span className="sidebar__item-name">{name}</span>
                 </a>
-            </li>
+            </li >
         );
     }
 }

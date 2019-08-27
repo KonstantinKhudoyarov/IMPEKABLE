@@ -1,0 +1,15 @@
+.rbc-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.rbc-toolbar__section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    &:first-child {
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,45 @@
+@import "../../styles/vars.scss";
+
+.event-popup {
+    position: absolute;
+    z-index: 1000;
+    width: 200px;
+    padding: 22px 26px 17px;
+    margin-top: 10px;
+    border: 1px solid $sidebarBg;
+    border-radius: 10px;
+    background-color: $sidebarTextColor;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-top-width: 0;
+        border-right: 7px solid transparent;
+        border-bottom: 10px solid $sidebarBg;
+        border-left: 7px solid transparent;
+    }
+
+    input,
+    textarea {
+        display: block;
+        width: 100%;
+        border: none;
+        outline: none;
+    }
+}
+
+.event-popup__title {
+    font-size: 10px;
+    line-height: 12px;
+    color: $eventPopup;
+}
+
+.event-popup__btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 33px;
+}

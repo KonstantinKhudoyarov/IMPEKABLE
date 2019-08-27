@@ -1,0 +1,20 @@
+@import "../../styles/vars.scss";
+
+.event-popup__control {
+    position: relative;
+    margin-bottom: 11px;
+    border-bottom: 1px solid rgba($sidebarBg, .3);
+}
+
+.event-popup__input {
+    font-size: 11px;
+    line-height: 14px;
+}
+
+.event-popup__error {
+    position: absolute;
+    top: 105%;
+    left: 0;
+    font-size: 10px;
+    color: $cancelBtn;
+}

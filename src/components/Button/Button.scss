@@ -1,0 +1,14 @@
+@import "../../styles/vars.scss";
+
+.btn {
+    font-size: 12px;
+    line-height: 20px;
+    color: $popupBtn;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn_dismiss {
+    color: $cancelBtn;
+}

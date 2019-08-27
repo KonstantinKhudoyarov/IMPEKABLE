@@ -4,7 +4,8 @@
 
     &:hover {
 
-        .sidebar__item-name {
+        .sidebar__item-name,
+        .svg-inline--fa {
             opacity: .6;
         }
     }
@@ -30,11 +31,19 @@
 }
 
 .sidebar__link {
-    display: block;
+    display: flex;
+    align-items: center;
     padding: 17px 3.846% 17px 9.615%;
+    color: $iconColor;
+
+    .svg-inline--fa {
+        width: 20px;
+        transition: .2s;
+    }
 }
 
 .sidebar__item-name {
+    margin-left: 15px;
     font-size: 15px;
     line-height: 19px;
     color: $sidebarTextColor;

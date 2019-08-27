@@ -2,37 +2,48 @@ import React from 'react';
 import './Sidebar.scss';
 import { SidebarTitle } from '../SidebarTitle/SidebarTitle';
 import { SidebarItem } from '../SidebarItem/SidebarItem';
+import { faHome, faChartBar, faEnvelope, faFlag, faReceipt, faUsers, faComments, faCalendarAlt, faLifeRing, faCog } from '@fortawesome/free-solid-svg-icons';
 
 const listItems = [
     {
-        name: 'Home'
+        name: 'Home',
+        icon: faHome
     },
     {
-        name: 'Dashboard'
+        name: 'Dashboard',
+        icon: faChartBar
     },
     {
-        name: 'Inbox'
+        name: 'Inbox',
+        icon: faEnvelope
     },
     {
-        name: 'Products'
+        name: 'Products',
+        icon: faFlag
     },
     {
-        name: 'Invoices'
+        name: 'Invoices',
+        icon: faReceipt
     },
     {
-        name: 'Customers'
+        name: 'Customers',
+        icon: faUsers
     },
     {
-        name: 'Chat Room'
+        name: 'Chat Room',
+        icon: faComments
     },
     {
-        name: 'Calendar'
+        name: 'Calendar',
+        icon: faCalendarAlt
     },
     {
-        name: 'Help Center'
+        name: 'Help Center',
+        icon: faLifeRing
     },
     {
-        name: 'Settings'
+        name: 'Settings',
+        icon: faCog
     }
 ];
 
@@ -47,7 +58,7 @@ export class Sidebar extends React.Component {
                 </SidebarTitle>
                 <ul className="sidebar__list">
                     {listItems.map((item, index) => {
-                        return <SidebarItem key={index} name={item.name} activeItem={activeItem} />;
+                        return <SidebarItem key={index} name={item.name} activeItem={activeItem} icon={item.icon} />;
                     })}
                 </ul>
             </nav>
